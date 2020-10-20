@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "TList.h"
+#include "../strutture/TList.h"
 
 /* ESERCIZIO 1
  * Scrivere una funzione RICORSIVA che conti il numero degli elementi di una 

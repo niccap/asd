@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "TList.h"
-#include "TArray.h"
+#include "../strutture/TList.h"
+#include "../strutture/TArray.h"
 
 /* ESERCIZIO 1
  * Scrivere una funzione ricorsiva printArray che stampa gli elementi di un 

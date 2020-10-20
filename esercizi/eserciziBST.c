@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "TBST.h"
+#include "../strutture/TBST.h"
 
 /* ESERCIZIO 1
  * Scrivere una funzione RICORSIVA che restituisce l'altezza di un albero

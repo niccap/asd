@@ -1,7 +1,8 @@
+// gcc eserciziCodeStack.c ../strutture/TQueue.c ../strutture/TStack.c ../strutture/TArray.c ../strutture/TInfo.c
 
 #include <stdio.h>
-#include "TQueue.h"
-#include "TStack.h"
+#include "../strutture/TQueue.h"
+#include "../strutture/TStack.h"
 
 /* 
  * ESERCIZIO 1
