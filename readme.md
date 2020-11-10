@@ -10,5 +10,11 @@ gcc esercizi/eserciziCodeStack.c strutture/TQueue.c strutture/TStack.c strutture
 gcc esercizi/eserciziBST.c strutture/TBST.c strutture/TInfo.c
 ```
 
+Istruzioni per la compilazione del codice di esempio sugli algoritmi di base: 
+```
+gcc algoritmi/ricerca.c strutture/TInfo.c
+gcc algoritmi/ordinamento.c strutture/TInfo.c
+```
+
 ---
 _[DIEM](https://www.diem.unisa.it/) - Università di Salerno_
