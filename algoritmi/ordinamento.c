@@ -13,13 +13,13 @@ void swap(TInfo* x, TInfo* y) {
     *y = z;
 }
 
-void arrayPrint(TInfo a[], int n) {
+void printArray(TInfo a[], int n) {
     for (int i = 0; i < n; i++)
         printf ("%d ", a[i]);
     printf ("\n");
 }
 
-void arrayCopy(TInfo a[], TInfo b[], int n) {
+void copyArray(TInfo a[], TInfo b[], int n) {
     for (int i = 0; i < n; i++)
         b[i]=a[i];
 }
@@ -164,36 +164,36 @@ int main(int argc, char** argv) {
         a[i]=rand()%max;
     
     printf ("Array di partenza:\n");
-    arrayPrint(a, size);
+    printArray(a, size);
     
-    arrayCopy(a, b, size);    
+    copyArray(a, b, size);    
     clock_t cc = clock();
     selectionSort(b, size);
     printf ("\nSelectionSort (%lu cc):\n", clock()-cc);
-    arrayPrint(b, size);
+    printArray(b, size);
 
-    arrayCopy(a, b, size);    
+    copyArray(a, b, size);    
     cc = clock();
     insertionSort(b, size);
     printf ("\nInsertionSort (%lu cc):\n", clock()-cc);
-    arrayPrint(b, size);
+    printArray(b, size);
 
-    arrayCopy(a, b, size);    
+    copyArray(a, b, size);    
     cc = clock();
     bubbleSort(b, size);
     printf ("\nBubbleSort (%lu cc):\n", clock()-cc);
-    arrayPrint(b, size);
+    printArray(b, size);
 
-    arrayCopy(a, b, size);    
+    copyArray(a, b, size);    
     cc = clock();
     mergeSort(b, size);
     printf ("\nMergeSort (%lu cc):\n", clock()-cc);
-    arrayPrint(b, size);
+    printArray(b, size);
 
-    arrayCopy(a, b, size);    
+    copyArray(a, b, size);    
     cc = clock();
     quickSort(b, size);
     printf ("\nQuickSort (%lu cc):\n", clock()-cc);
-    arrayPrint(b, size);
+    printArray(b, size);
 }
 
