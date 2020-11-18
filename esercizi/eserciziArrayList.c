@@ -17,7 +17,7 @@ void arrayPrint1(TArray *a) {
     if (a->length == 0)
         return;
     a->length--;
-    arrayPrint(a);
+    arrayPrint1(a);
     a->length++;
     infoPrint(a->items[a->length-1]);
 }
@@ -36,7 +36,7 @@ void arrayPrint2(TArray *a) {
         return;
     infoPrint(a->items[0]);
     a->items++; a->length--; a->size--;
-    arrayPrint(a);
+    arrayPrint2(a);
     a->items--; a->length++; a->size++;
 }
 
