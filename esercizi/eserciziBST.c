@@ -78,11 +78,11 @@ int BSTsumDepth(TBST tree, int k) {
  * di un BST di interi compresi tra min e max (inclusi gli estremi)
  */
 
-void BSTprintInterval(TBST tree, int min, int max) {
+void BSTprintInterval(TBST tree, TInfo min, TInfo max) {
     if (tree == NULL)
         return;
     BSTprintInterval(tree->left, min, max);
-    if (!infoGreater(min, tree->info) && !infoLess(max, tree->info)) // min <= tree->info && max >= tree->info
+    if (!infoGreater(min, tree->info) && !infoLess(max, tree->info)) // tree->info >= min && tree->info <= max
         infoPrint(tree->info);
     BSTprintInterval(tree->right, min, max);
 }
@@ -92,11 +92,11 @@ void BSTprintInterval(TBST tree, int min, int max) {
 void BSTprintInterval2 (TBST tree, int min, int max) {
     if (tree == NULL)
         return;
-    if (!infoGreater(min, tree->info)) // min <= tree->info
+    if (!infoGreater(min, tree->info)) // tree->info >= min
         BSTprintInterval2(tree->left, min, max);
-    if (!infoGreater(min, tree->info) && !infoLess(max, tree->info)) // min <= tree->info && max >= tree->info
+    if (!infoGreater(min, tree->info) && !infoLess(max, tree->info)) // tree->info >= min && tree->info <= max
         printf("%d ", tree->info);
-    if (!infoLess(max, tree->info)) // max >= tree->info
+    if (!infoLess(max, tree->info)) // tree->info <= max
         BSTprintInterval2(tree->right, min, max);
 }
 
@@ -127,7 +127,7 @@ TBST BSTfather2(TBST tree, TBST node) {
     TBST father = NULL;
     if (!infoGreater(node->info, tree->info)) // node->info <= tree->info
         father = BSTfather2(tree->left, node);
-    if (father == NULL && !infoLess(node->info, tree->info)) // fatherr == NULL && node->info >= tree->info
+    if (father == NULL && !infoLess(node->info, tree->info)) // father == NULL && node->info >= tree->info
         father = BSTfather2(tree->right, node);
     return father;
 }
@@ -155,7 +155,7 @@ TBST BSTsubTree(TBST tree, TInfo info1, TInfo info2) {
 
 int main(int argc, char** argv) {
     
-    TBST tree, f;
+    TBST tree = BSTcreate(), f = BSTcreate();
     tree = BSTinsert(tree, 20);
     tree = BSTinsert(tree, 10);
     tree = BSTinsert(tree, 30);
