@@ -17,7 +17,7 @@ gcc algoritmi/ricerca.c strutture/TInfo.c
 gcc algoritmi/ordinamento.c strutture/TInfo.c
 ```
 
-Nota: le strutture THT e THTopen si trovano nella sottocartella strutture/THT perché necessitano di una diversa versione del tipo TInfo
+__N.B.__: le strutture dati _THT__e _THTopen_ si trovano nella sottocartella _strutture/THT_ poiché necessitano di una diversa versione del tipo _TInfo_ rispetto a quallo contenuto nella catella _strutture_.
 
 ---
 _[DIEM](https://www.diem.unisa.it/) - Università di Salerno_
