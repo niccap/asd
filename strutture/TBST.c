@@ -150,7 +150,6 @@ TBST BSTinsertI (TBST tree, TInfo info) {
 }
  
 TBST BSTdeleteI (TBST tree, TInfo info) {
-    
     TBSTnode *node = tree;
     TBSTnode *prec = NULL;     
     int right;
