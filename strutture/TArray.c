@@ -38,7 +38,7 @@ void arrayResize (TArray *a, int length) {
 
 void arrayPrint(TArray *a) {
     for (int i = 0; i < a->length; ++i)
-        printf ("%d ", a->items[i]);
+        infoPrint(a->items[i]);
     printf ("\n");
 }
 
